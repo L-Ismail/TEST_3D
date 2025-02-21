@@ -1,0 +1,29 @@
+<?php
+//On stock les données dans la variable dsn (data source name).
+$dsn = 'mysql:host=C:\Users\Ismail\Documents\TEST_3D;dbname=C:\Users\Ismail\Documents\TEST_3D\site_3D_1.db;
+        port=127.0.0.1;charset=UTF-8';
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lier un fichier local</title>
+    <link rel="stylesheet" href="TEST.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lier un fichier STL local</h1>
+        <form action="/lier" method="post">
+            <input type="text" name="chemin" placeholder="Chemin complet du fichier" required>
+            <input type="text" name="description" placeholder="Description du fichier" required>
+            <button type="submit">Lier le fichier</button>
+        </form>
+        <br>
+        <a href="/fichiers">Voir les fichiers liés</a>
+    </div>
+    <script src="lier_fichier.js"></script>
+</body>
+</html>

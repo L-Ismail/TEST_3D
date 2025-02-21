@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichiers STL</title>
+    <link rel="stylesheet" href="TEST.css">
+</head>
+<body>
+    <h1>Liste des fichiers STL</h1>
+    <ul>
+        <% fichiers.forEach(fichier => { %>
+            <li>
+                <strong><%= fichier.nom %></strong> - <%= fichier.description %> 
+                (<%= fichier.taille %> octets) 
+                <br><em>Chemin :</em> <%= fichier.chemin %>
+            </li>
+        <% }) %>
+    </ul>
+    <br>
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>
