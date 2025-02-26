@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets 3D - Impression</title>
+    <link rel="stylesheet" href="esthetique.css">
+</head>
+<body>
+    <h1>Catalogue des Objets 3D</h1>
+    <ul>
+        {% for objet in objets %}
+            <li>
+                <h2>{{ objet.libelle }}</h2>
+                <p>{{ objet.description }}</p>
+                <a href="commande.html">Commander</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

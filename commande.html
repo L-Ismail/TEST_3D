@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - {{ objet.libelle }}</title>
+    <link rel="stylesheet" href="esthetique.css">
+</head>
+<body>
+    <h1>Commander : {{ objet.libelle }}</h1>
+    <form method="post">
+        <label for="client_nom">Nom :</label>
+        <input type="text" name="client_nom" required>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" required>
+
+        {% for param in parametres %}
+            <label for="{{ param.code_variable }}">{{ param.libelle }} :</label>
+            <input type="number" name="{{ param.code_variable }}" min="{{ param.min_valeur }}" max="{{ param.max_valeur }}" value="{{ param.valeur_defaut }}" required>
+        {% endfor %}
+
+        <button type="submit">Valider la commande</button>
+    </form>
+</body>
+</html>
